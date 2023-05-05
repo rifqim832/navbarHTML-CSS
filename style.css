@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #222;
+}
+
+nav .toggle {
+    position: relative;
+    display: none;
+    margin-top: 11px;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.toggle input {
+    position: absolute;
+    width: 41px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.toggle span:nth-child(4) {
+    transform-origin: 0 0;
+}
+
+.toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+    -webkit-transform: rotate(45deg) translate(-1px, -1px);
+    -moz-transform: rotate(45deg) translate(-1px, -1px);
+    -ms-transform: rotate(45deg) translate(-1px, -1px);
+    -o-transform: rotate(45deg) translate(-1px, -1px);
+    background-color: crimson;
+}
+
+.toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+    -webkit-transform: rotate(-45deg) translate(-1px, 0);
+    -moz-transform: rotate(-45deg) translate(-1px, 0);
+    -ms-transform: rotate(-45deg) translate(-1px, 0);
+    -o-transform: rotate(-45deg) translate(-1px, 0);
+    background-color: crimson;
+}
+
+.toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.logo .firstname {
+    color: #fff;
+    font-weight: 700;
+}
+
+.logo .lastname {
+    color: crimson;
+    font-weight: 500;
+}
+
+nav ul {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: .8em;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+nav ul a:hover {
+    color: crimson;
+}
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgb(218, 20, 60);
+    border: none;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: rgba(218, 20, 60, .8);
+    transition: .3s;
+}
+
+@media screen and (max-width: 576px) {
+    nav ul {
+        position: absolute;
+        width: 100vh;
+        height: 30vh;
+        margin-left: -40px;
+        margin-top: 40px;
+        justify-content: space-evenly;
+        align-items: start;
+        flex-direction: column;
+        background-color: #222;
+        transform: translateY(-150%);
+        -webkit-transform: translateY(-150%);
+        -moz-transform: translateY(-150%);
+        -ms-transform: translateY(-150%);
+        -o-transform: translateY(-150%);
+        transition: .5s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+        z-index: -2;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+        margin-left: 20px;
+    }
+
+    nav ul.slide {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    nav .toggle {
+        display: flex;
+    }
+
+}
