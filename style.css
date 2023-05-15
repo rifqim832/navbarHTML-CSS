@@ -191,6 +191,11 @@ button:hover {
         flex-direction: column;
         z-index: -999;
     }
+
+    .jumbotron img {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 .jumbotron {
