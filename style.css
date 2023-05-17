@@ -93,12 +93,10 @@ nav .logo {
 
 .logo .firstname {
     color: #fff;
-    font-weight: 700;
 }
 
 .logo .lastname {
     color: crimson;
-    font-weight: 500;
 }
 
 nav ul {
@@ -193,8 +191,11 @@ button:hover {
     }
 
     .jumbotron img {
-        width: 200px;
-        height: 200px;
+        display: none;
+    }
+
+    .jobs {
+        justify-content: center;
     }
 }
 
@@ -207,13 +208,17 @@ button:hover {
     align-items: center;
 }
 
-.kata h5 {
+.kata .satu {
     font-size: 2em;
     color: #fff;
 }
 
-.kata h2 {
+.kata .dua {
     font-size: 3em;
     color: crimson;
     font-weight: bold;
+}
+
+.jobs {
+    display: flex;
 }
