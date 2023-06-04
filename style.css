@@ -214,14 +214,20 @@ button:hover {
     font-weight: bold;
 }
 
+.gallery {
+    margin: 20px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
 a img {
     display: block;
     width: 100%;
 }
 
-.gallery {
+li {
+    list-style: none;
     margin: auto;
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
